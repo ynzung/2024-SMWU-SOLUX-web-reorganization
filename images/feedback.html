@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recruit_solux</title>
+    <style>
+
+        /* Web Font Load */
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        /* @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,700&display=swap'); */
+        @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+        *{transition: all 1s cubic-bezier(.19,1,.22,1); font-family: 'Montserrat', 'NanumSquare', sans-serif;}
+
+        body {
+            background-color: black;
+            color: white;
+            margin-top: -20px;
+            font-family: 'Gothic', sans-serif;
+        }
+
+        header {
+            padding: 1vw;
+        }
+
+        header img {
+            width: 5.9vw; 
+            height: auto;
+            margin-left: 2vw;
+            margin-top:  20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 150px;
+        }
+
+        .solux-text {
+            font-size: 85pt;
+            font-weight: 800;
+            color: black;
+            -webkit-text-stroke: 1.5px white;
+            margin-bottom: 10px;
+            margin-top: 60px;
+        }
+
+        .recruit-text {
+            font-size: 100pt;
+            font-weight: 900;
+            margin-top: -30px;
+            font-weight: 500;
+        }
+
+        .talent {
+            font-size: 15pt;
+            color: #808080;
+            margin-top: -80px;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin-top: -100px;
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        .menu li {
+            float: left;
+            margin-right: 20px;
+            cursor: pointer;
+            color: #808080; 
+        }
+
+        .menu li:hover {
+            color: #8CE0F4; 
+        }
+
+        .selected {
+            color: #8CE0F4 !important; 
+            font-size: larger;
+        }
+
+        .description {
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: right;
+            margin-right: 150px;
+            margin-top: -20px;
+        }
+
+        .apply-button {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 15pt;
+            color: white;
+            background-color: transparent;
+            border: 2px solid #808080;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.4s, border 1s;
+        }
+
+        .faq-text {
+            color:#8CE0F4;
+            font-size: 30pt;
+            margin-left: 150px;
+            font-weight: bold;
+        }
+
+        .faq {
+            padding: 20px;
+            margin-left: 150px;
+            margin-right: 150px;
+            border-bottom: 1px solid #808080;
+        }
+
+        .faq-container .question {
+            font-size: 12pt;
+            cursor: pointer;
+        }
+
+        .faq-container .answer {
+            margin-left: 30px;
+            margin-top: 40px;
+            display: none;
+            cursor: pointer;
+        }
+
+        .faq-container .show-answer {
+            display: block;
+        }
+
+        footer {
+		    padding: 18px;
+            font-size: 9pt;
+            text-align: center;
+            margin-top:40px;
+            color: #808080;
+	    }
+
+        footer a {
+            color: #8CE0F4;
+            text-decoration-line: none;
+        }
+
+        /* Media Queries for Tablets */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            header {
+                padding: 20px;
+            }
+
+            header img {
+                width: 70px;
+                height: auto;
+                margin-left: 20px;
+                margin-top: 25px;
+            }
+
+            .text-container {
+                margin-left: 40px;
+            }
+
+            .solux-text {
+                font-size: 80pt;
+                margin-top: 90px;
+            }
+
+            .recruit-text {
+                font-size: 90pt;
+                margin-top: -20px;
+            }
+
+            .talent {
+                font-size: 14pt;
+                margin-top: -90px;
+                margin-right:60px;
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: right;
+                margin-right: 120px;
+                margin-top: 50px;
+            }
+
+            .apply-button {
+                padding: 12px 24px;
+                font-size: 14pt;
+            }
+
+            .faq-text {
+                margin-left: 60px;
+            }
+
+            .faq {
+                padding: 14px;
+                margin-left: 60px;
+                margin-right: 60px;
+            }
+
+            .faq-container .answer {
+                margin-left: 25px;
+                margin-top: 30px;
+            }
+
+            footer {
+                margin-top: 50px;
+                font-size: 9pt;
+            }
+        }
+
+
+
+        /* Media Queries for Moblies */
+        @media screen and (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+
+            header {
+            padding: 10px;
+            }
+
+            header img {
+                width: 70px;
+                height: auto;
+                margin-left: 5px;
+                margin-top:  5px;
+            }
+
+            .text-container {
+                margin-left: 20px;
+            }
+
+            .solux-text {
+                font-size: 50pt;
+                margin-top: 70px;
+            }
+
+            .recruit-text {
+                font-size: 60pt;
+                margin-top: -15px;
+            }
+
+            .talent {
+                font-size: 12pt;
+                margin-right: 20px;
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+                margin-right: 10px;
+                margin-top: 40px;
+            }
+
+            .apply-button {
+                padding: 10px 22px;
+                font-size: 13pt;
+                justify-content: center;
+            }
+
+            .faq-text {
+                justify-content: center;
+                margin-left: 20px;
+            }
+
+            .faq {
+                padding: 12px;
+                margin-left: 20px;
+                margin-right: 20px;
+                justify-content: center;
+            }
+
+            .faq-container .answer {
+                margin-left: 15px;
+                margin-top: 25px;
+            }
+
+            footer {
+                margin-top: 80px;
+                font-size: 8pt;
+            }         
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <a href="https://sm-solux.dev">
+        <img src="./soluxicon.png" alt="solux">
+    </a>
+    </header>
+
+    <div class="container">
+        <div class="text-container">
+            <p class="solux-text">SOLUX</p>
+            <p class="recruit-text">Recruit<br></p>
+
+                <ul class="menu">
+                    <li onclick="showGrowth()" class="selected">성장</li>
+                    <li onclick="showSolidarity()">연대</li>
+                    <li onclick="showResponsibility()">책임</li>
+                </ul>
+            
+                <div id="growth" class="description">
+                    <p>- 지속적이고 꾸준한 노력을 투자하며 팀과 함께 발전하는 성장가능성을 지닌 분</p>
+                    <p>- 적극적인 태도로 부원들의 동기부여를 돕고, 경쟁력을 함양시키며 여러 과제들에 두려움 없이 도전하는 열정적인 분</p>
+                </div>
+            
+                <div id="solidarity" class="description" style="display: none;">
+                    <p>- 동아리 내 다양성을 가진 부원들과 어우러지며 공동의 목표를 위해 노력하고, 소통과 협업을 촉진하는 협력 의식을 가진 분</p>
+                    <p>- 프로젝트 중 발생할 수 있는 여러 갈등 상황에서 각자의 입장을 공감, 정리하여 조화로운 해결책을 모색할 수 있는 분</p>
+                </div>
+            
+                <div id="responsibility" class="description" style="display: none;">
+                    <p>- 솔룩스의 메인 활동인 프로젝트에서 끝까지 최선을 다하고 완주할 수 있는 분</p>
+                    <p>- 솔룩스에 높은 우선순위를 두며 각종 행사와 활동에 적극적으로 참여할 수 있는 분</p>
+                </div>  >
+        </div>
+        <br>
+        <br>
+        <div class="button-container">
+            <button target="_blank" class="apply-button" id="recruitButton">Apply Now</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="faq-container">
+            <p class="faq-text">
+                FAQ 
+            </p>
+
+            <div class="faq" onclick="toggleAnswer(1)">
+                <p class="question">Q. 질문1</p>
+                <p class="answer" id="answer1">A. 답변</p>
+            </div>
+
+
+
+            <div class="faq" onclick="toggleAnswer(2)">
+                <p class="question">Q. 질문2</p>
+                <p class="answer" id="answer2">A. 답변</p>
+            </div>
+
+
+
+            <div class="faq" onclick="toggleAnswer(3)">
+                <p class="question">Q. 질문3</p>
+                <p class="answer" id="answer3">A. 답변</p>
+            </div>
+
+
+
+            <div class="faq" onclick="toggleAnswer(4)">
+                <p class="question">Q. 질문4</p>
+                <p class="answer" id="answer4">A. 답변</p>
+            </div>
+    </div>
+
+    <script>
+        /* 인재상 부분 스크립트 */
+        window.onload = function() {
+            showGrowth();
+        };
+
+        function showGrowth() {
+            document.querySelectorAll('.description').forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            document.querySelectorAll('.menu li').forEach(function(item) {
+                item.classList.remove('selected');
+                item.style.color = '#808080';
+            });
+            document.querySelector('.menu li:nth-child(1)').classList.add('selected');
+            document.getElementById('growth').style.display = 'block';
+        }
+
+        function showSolidarity() {
+            document.querySelectorAll('.description').forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            document.querySelectorAll('.menu li').forEach(function(item) {
+                item.classList.remove('selected');
+                item.style.color = '#808080';
+            });
+            document.querySelector('.menu li:nth-child(2)').classList.add('selected');
+            document.getElementById('solidarity').style.display = 'block';
+        }
+
+        function showResponsibility() {
+            document.querySelectorAll('.description').forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            document.querySelectorAll('.menu li').forEach(function(item) {
+                item.classList.remove('selected');
+                item.style.color = '#808080';
+            });
+            document.querySelector('.menu li:nth-child(3)').classList.add('selected');
+            document.getElementById('responsibility').style.display = 'block';
+        }
+
+        /* 리크루팅 기간 설정 스크립트 */
+        document.getElementById("recruitButton").addEventListener("click", function() {
+
+            var currentDate = new Date();
+            var currentYear = currentDate.getFullYear();
+            var currentMonth = currentDate.getMonth() + 1; 
+            var currentDay = currentDate.getDate();
+            var currentHour = currentDate.getHours();
+
+            /* 솔룩스 리크루트 기간 시작일자와 마감일자, 마감시간 입력 */
+            var startDate = new Date("2024-02-13");
+            var endDate = new Date("2024-02-14T00:00:00");
+
+            if (currentDate >= startDate && currentDate <= endDate) {
+                window.location.href = "https://forms.gle/TTAGamUiJrFrph9y7";   /* 솔룩스 리크루트 구글 폼 링크 입력 */
+            } else {
+                alert("현재 모집 기간이 아닙니다!");    /* 리크루트 기간이 아닐 경우 표시할 알림 메시지 입력*/
+            }
+            });
+
+    </script>
+
+</body>
+<footer id="footer">
+    <p class="copyright">© 2023. SOLUX all rights reserved. |<a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=sm.solux@gmail.com" class="admin"> email - sm.solux@gmail.com</a></p>
+    <p class="copyright" style="margin-top: 10px;">
+        28기 임원진 - 고은서(회장), 정채영(부회장,교육운영부장), 김경은(재정복지부장), 유윤지(홍보협력부장)<br>
+        강지윤, 김지원, 이기주(이상 교육운영부), 김민진, 김세희, 김예지, 이지민(이상 재정복지부), 노영서, 송하은, 이지원(이상 홍보협력부)</p>
+</footer>
+</html>
+
+
+

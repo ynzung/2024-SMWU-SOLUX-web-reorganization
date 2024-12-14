@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recruit_solux</title>
+    <style>
+
+        /* Web Font Load */
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        /* @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,700&display=swap'); */
+        @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+        *{transition: all 1s cubic-bezier(.19,1,.22,1); font-family: 'Montserrat', 'NanumSquare', sans-serif;}
+
+        /* basic setup style sheet */
+        body {
+            background-color: black;
+            color: white;
+            margin-top: -20px;
+            font-family: 'Gothic', sans-serif;
+        }
+
+        header {
+            padding: 1vw;
+        }
+
+        header img {
+            width: 5.9vw; 
+            height: auto;
+            margin-left: 2vw;
+            margin-top:  20px;
+        }
+
+        footer {
+		    padding: 18px;
+            font-size: 9pt;
+            text-align: center;
+            margin-top:40px;
+            color: #808080;
+	    }
+
+        footer a {
+            color: #8CE0F4;
+            text-decoration-line: none;
+        }
+
+        /* Solux-recruit Text style sheet */
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 130px;
+        }
+
+        .solux-text {
+            font-size: 100pt;
+            font-weight: 800;
+            color: black;
+            -webkit-text-stroke: 1.5px white;
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .recruit-text {
+            font-size: 115pt;
+            font-weight: 900;
+            margin-top: -30px;
+            font-weight: 500;
+        }
+
+        /* Ideal Member Profile style sheet */
+        .menu {
+            list-style-type: none;
+            margin-top: -140px;
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        .menu li {
+            float: left;
+            margin-right: 20px;
+            cursor: pointer;
+            color: #808080; 
+        }
+
+        .menu li:hover {
+            color: #8CE0F4; 
+        }
+
+        .selected {
+            color: #8CE0F4 !important; 
+            font-size: 20pt;
+            font-weight: bolder;
+        }
+
+        .description {
+            margin-left: 30px;
+            font-size: 18px;
+            margin-right: 60px;
+        }
+
+        /* Apply Now Button style sheet */
+        .button-container {
+            display: flex;
+            justify-content: right;
+            margin-right: 150px;
+            margin-top: -20px;
+        }
+
+        .apply-button {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 15pt;
+            color: white;
+            background-color: transparent;
+            border: 2px solid #808080;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* FAQ style shee */
+        .faq-text {
+            color:#8CE0F4;
+            font-size: 30pt;
+            margin-left: 150px;
+            font-weight: bold;
+        }
+        .que{
+            font-size:x-large;
+            font-weight: bolder;
+            color: #8CE0F4;
+        }
+
+        .faq {
+            padding: 20px;
+            margin-left: 150px;
+            margin-right: 150px;
+            border-bottom: 1px solid #808080;
+        }
+
+        .faq-container .question {
+            font-size: 13pt;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+
+        .faq-container .answer {
+            margin-top: 40px;
+            display: none;
+            cursor: pointer;
+            color: #C0C0C0;
+            font-size: 12pt;
+        }
+
+        .faq-container .show-answer {
+            display: block;
+        }
+
+        /* Media Queries for Tablets */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+
+            /* basic setup style sheet */
+            header {
+                padding: 20px;
+            }
+
+            header img {
+                width: 70px;
+                height: auto;
+                margin-left: 20px;
+                margin-top: 25px;
+            }
+
+            footer {
+                margin-top: 50px;
+                font-size: 9pt;
+            }
+
+            /* Solux-recruit Text style sheet */
+            .text-container {
+                margin-left: 40px;
+            }
+
+            .solux-text {
+                font-size: 80pt;
+                margin-top: 90px;
+            }
+
+            .recruit-text {
+                font-size: 90pt;
+                margin-top: -20px;
+            }
+
+            /* Ideal Member Profile style sheet */
+            .menu {
+                list-style-type: none;
+                margin-top: -100px;
+                margin-left: 15px;
+                padding: 0;
+            }
+
+            .menu li {
+                float: left;
+                margin-right: 15px;
+                cursor: pointer;
+                color: #808080; 
+            }
+
+            .menu li:hover {
+                color: #8CE0F4; 
+            }
+
+            .selected {
+                color: #8CE0F4 !important; 
+                font-size: 17pt;
+            }
+
+            .description {
+                margin-left: 20px;
+                font-size: 13pt;
+                margin-right: 60px;
+            }
+
+            /* Apply Now Button style sheet */
+            .button-container {
+                display: flex;
+                justify-content: right;
+                margin-right: 80px;
+                margin-top: 30px;
+            }
+
+            .apply-button {
+                padding: 12px 24px;
+                font-size: 14pt;
+            }
+
+            /* FAQ style sheet */
+            .faq-text {
+                margin-left: 60px;
+            }
+
+            .que{
+                font-size: large;
+                font-weight: bolder;
+                color: #8CE0F4;
+            }
+
+            .faq {
+                padding: 14px;
+                margin-left: 60px;
+                margin-right: 60px;
+            }
+            .faq-container .question {
+                font-size: 12pt;
+            }
+
+            .faq-container .answer {
+                margin-top: 30px;
+                font-size: 11pt;
+            }
+        }
+
+
+
+        /* Media Queries for Moblies */
+        @media screen and (max-width: 600px) {
+
+            /* basic set up */
+            body {
+                margin: 10px;
+            }
+
+            header {
+            padding: 10px;
+            }
+
+            header img {
+                width: 70px;
+                height: auto;
+                margin-left: 5px;
+                margin-top:  5px;
+            }
+
+            footer {
+                margin-top: 80px;
+                font-size: 8pt;
+            } 
+
+            /* Solux-recruit Text style sheet */
+            .text-container {
+                margin-left: 20px;
+            }
+
+            .solux-text {
+                font-size: 50pt;
+                margin-top: 70px;
+            }
+
+            .recruit-text {
+                font-size: 60pt;
+                margin-top: -15px;
+            }
+
+            /* Ideal Member Profile style sheet */
+            .menu {
+                list-style-type: none;
+                margin-top: -60px;
+                margin-left: 10px;
+                padding: 0;
+            }
+
+            .menu li {
+                float: left;
+                margin-right: 12px;
+                cursor: pointer;
+                color: #808080; 
+            }
+
+            .menu li:hover {
+                color: #8CE0F4; 
+            }
+
+            .selected {
+                color: #8CE0F4 !important; 
+                font-size: 15pt;
+            }
+
+            .description {
+                margin-top: -10px;
+                margin-left: 10px;
+                font-size: 10pt;
+                margin-right: 25px;
+            }
+
+            /* Apply Now Button style sheet */
+            .button-container {
+                display: flex;
+                justify-content: center;
+                margin-right: 10px;
+                margin-top: 30px;
+            }
+
+            .apply-button {
+                padding: 10px 22px;
+                font-size: 13pt;
+                justify-content: center;
+            }
+
+            /* FAQ style sheet */
+            .faq-text {
+                justify-content: center;
+                margin-left: 20px;
+            }
+
+            .faq {
+                padding: 12px;
+                margin-left: 20px;
+                margin-right: 20px;
+                justify-content: center;
+            }
+
+            .faq-container .question {
+                font-size: 11pt;
+            }
+
+            .faq-container .answer {
+                margin-top: 25px;
+                font-size: 10pt;
+            }        
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더에 솔룩스 로고-누르면 솔룩스 메인페이지로 이동  -->
+    <header>
+    <a href="https://sm-solux.dev">
+        <img src="./images/soluxicon.png" alt="solux">
+    </a>
+    </header>
+
+    <div class="container">
+        <div class="text-container">
+            <!-- 솔룩스 리크루트 텍스트 부분 코드 -->
+            <p class="solux-text">SOLUX</p>
+            <p class="recruit-text">Recruit<br></p>
+
+                <!-- 인재상 메뉴 부분 코드 -->
+                <ul class="menu">
+                    <li onclick="showGrowth()" class="selected">성장</li>
+                    <li onclick="showSolidarity()">연대</li>
+                    <li onclick="showResponsibility()">책임</li>
+                </ul>
+                
+                <!-- 인재상 내용 부분 코드 -->
+                <div id="growth" class="description">
+                    <p>- 지속적이고 꾸준한 노력을 투자하며 팀과 함께 발전하는 성장가능성을 지닌 분</p>
+                    <p>- 적극적인 태도로 부원들의 동기부여를 돕고, 경쟁력을 함양시키며 여러 과제들에 두려움 없이 도전하는 열정적인 분</p>
+                </div>
+            
+                <div id="solidarity" class="description" style="display: none;">
+                    <p>- 동아리 내 다양성을 가진 부원들과 어우러지며 공동의 목표를 위해 노력하고, 소통과 협업을 촉진하는 협력 의식을 가진 분</p>
+                    <p>- 프로젝트 중 발생할 수 있는 여러 갈등 상황에서 각자의 입장을 공감, 정리하여 조화로운 해결책을 모색할 수 있는 분</p>
+                </div>
+            
+                <div id="responsibility" class="description" style="display: none;">
+                    <p>- 솔룩스의 메인 활동인 프로젝트에서 끝까지 최선을 다하고 완주할 수 있는 분</p>
+                    <p>- 솔룩스에 높은 우선순위를 두며 각종 행사와 활동에 적극적으로 참여할 수 있는 분</p>
+                </div>
+        </div>
+        <br>
+        <br>
+        <!-- 리크루트 폼으로 이동하는 버튼 부분 코드 -->
+        <div class="button-container">
+            <button target="_blank" class="apply-button" id="recruitButton">Apply Now</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="faq-container">
+
+            <!-- 하늘색  FAQ 텍스트 코드 -->
+            <p class="faq-text">
+                FAQ 
+            </p>
+
+            <!-- faq안 질문&답변 내용 토글 코드 -->
+            <div class="faq" onclick="toggleAnswer(1)">
+                <p class="question"><span class="que">Q.</span> 2학기에는 모집 계획이 없나요?</p>
+                <p class="answer" id="answer1">A. 솔룩스는 1년 기수제로, 1년에 1번 모집하고 있습니다.</p>
+            </div>
+
+            <div class="faq" onclick="toggleAnswer(2)">
+                <p class="question"><span class="que">Q.</span> 고정활동요일은 팀별로 다른건가요?</p>
+                <p class="answer" id="answer2">A. 맞습니다! 팀별로 주 1회 회의 시간 의논하여 대면/비대면 상관없이 진행할 수 있으나, 대면 회의를 권장하고 있습니다.</p>
+            </div>
+
+            <div class="faq" onclick="toggleAnswer(3)">
+                <p class="question"><span class="que">Q.</span> 보통 경쟁률이 어떻게 되나요?</p>
+                <p class="answer" id="answer3">A. 해마다 지원률이 다르기 때문에 정확히 말씀드리기는 어렵습니다. 지원자님의 역량을 충분히 보여주시면 될 것 같습니다.</p>
+            </div>
+
+            <div class="faq" onclick="toggleAnswer(4)">
+                <p class="question"><span class="que">Q.</span> 4학년이 지원해도 괜찮을까요?</p>
+                <p class="answer" id="answer4">A. 솔룩스는 고학년 구성원도 많기 때문에 활동기간인 1년 동안 적극적으로 활동이 가능하다면 지원해주세요!</p>
+            </div>
+
+            <div class="faq" onclick="toggleAnswer(5)">
+                <p class="question"><span class="que">Q.</span> 솔룩스에 1차 합격 후 면접은 어떻게 진행되나요?</p>
+                <p class="answer" id="answer5">A. 면접 가능 시간대에 배치 후 합격 메일을 보내드립니다. 면접 형식은 2:2 면접으로 20분 정도 진행됩니다. 면접이 모두 마무리되면 추후 2차 합격 메일을 보내드립니다.</p>
+            </div>
+    </div>
+
+    <script>
+        /* 인재상 부분 스크립트 */
+        window.onload = function() {
+            showGrowth();
+        };
+
+        function showGrowth() {
+            document.querySelectorAll('.description').forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            document.querySelectorAll('.menu li').forEach(function(item) {
+                item.classList.remove('selected');
+                item.style.color = '#808080';
+            });
+            document.querySelector('.menu li:nth-child(1)').classList.add('selected');
+            document.getElementById('growth').style.display = 'block';
+        }
+
+        function showSolidarity() {
+            document.querySelectorAll('.description').forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            document.querySelectorAll('.menu li').forEach(function(item) {
+                item.classList.remove('selected');
+                item.style.color = '#808080';
+            });
+            document.querySelector('.menu li:nth-child(2)').classList.add('selected');
+            document.getElementById('solidarity').style.display = 'block';
+        }
+
+        function showResponsibility() {
+            document.querySelectorAll('.description').forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            document.querySelectorAll('.menu li').forEach(function(item) {
+                item.classList.remove('selected');
+                item.style.color = '#808080';
+            });
+            document.querySelector('.menu li:nth-child(3)').classList.add('selected');
+            document.getElementById('responsibility').style.display = 'block';
+        }
+
+        /* faq 답변 토글 설정 스크립트 */
+        function toggleAnswer(questionNumber) {
+            var answerId = "answer" + questionNumber;
+            var answerElement = document.getElementById(answerId);
+            answerElement.classList.toggle("show-answer");
+        }
+
+        /* 리크루팅 기간 설정 스크립트 */
+        document.getElementById("recruitButton").addEventListener("click", function() {
+
+            var currentDate = new Date();
+            var currentYear = currentDate.getFullYear();
+            var currentMonth = currentDate.getMonth() + 1; 
+            var currentDay = currentDate.getDate();
+            var currentHour = currentDate.getHours();
+
+            /* 솔룩스 리크루팅 기간 시작일자와 마감일자, 마감시간 입력 */
+            var startDate = new Date("2024-02-21T00:00:00");
+            var endDate = new Date("2024-02-29T23:59:59");
+
+            if (currentDate >= startDate && currentDate <= endDate) {
+                window.location.href = "https://forms.gle/6YmUCakwyvg9h4go9";   /* 솔룩스 리크루트 구글 폼 링크 입력 */
+            } else {
+                alert("현재 모집 기간이 아닙니다!");    /* 리크루트 기간이 아닐 경우 표시할 알림 메시지 입력*/
+            }
+            });
+
+    </script>
+
+</body>
+<footer id="footer">
+    <p class="copyright">© 2024. SOLUX all rights reserved. |<a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=sm.solux@gmail.com" class="admin"> email - sm.solux@gmail.com</a></p>
+</footer>
+</html>
+
+
+

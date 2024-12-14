@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>solux_mainpage</title>
+    <style>
+      /* Web Font Load */
+      @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+      /* @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,700&display=swap'); */
+      @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+      * {
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        font-family: "Montserrat", "NanumSquare", sans-serif;
+      }
+
+      body {
+        background-color: black;
+        color: white;
+        margin-top: -20px;
+        /* font-family: 'Gothic', sans-serif; */
+      }
+
+      header {
+        padding: 1vw;
+      }
+
+      header img {
+        width: 5.9vw;
+        height: auto;
+        margin-left: 2vw;
+        margin-top: 20px;
+      }
+
+      footer {
+        padding: 18px;
+        font-size: 0.8vw;
+        text-align: center;
+        margin-top: 40px;
+        color: #808080;
+      }
+
+      footer a {
+        color: #8ce0f4;
+        text-decoration-line: none;
+      }
+
+      /* intro solux css*/
+      .intro {
+        display: flex;
+      }
+
+      .container {
+        width: 100%;
+        height: 34vw;
+        display: flex;
+        margin-top: 9.5vw;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .solux-text {
+        font-size: 9.5vw;
+        font-weight: 800;
+        color: black;
+        -webkit-text-stroke: 0.25vw white;
+        margin-top: 3vw;
+        margin-right: 5vw;
+        animation-name: slide-up;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+
+      @keyframes slide-up {
+        from {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .first {
+        font-size: 2vw;
+        font-weight: 700;
+      }
+      .detail {
+        font-size: 1.3vw;
+      }
+      .last {
+        font-size: 1.7vw;
+        font-weight: 600;
+      }
+
+      /* joinus button style sheet */
+      .joinus-btn {
+        padding: 5px 17px;
+        text-align: center;
+        font-size: 13pt;
+        font-weight: bolder;
+        color: #8ce0f4;
+        background-color: black;
+        border: 1.5px solid #8ce0f4;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .joinus-btn:hover {
+        background-color: #8ce0f4;
+        color: black;
+      }
+
+      .btn-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -60px;
+        position: fixed;
+        right: 70px;
+      }
+
+      /* to-blog button style sheet */
+      .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        margin-right: 9.5vw;
+        margin-top: 1vw;
+      }
+
+      .solux-btn {
+        display: inline-block;
+        padding: 0.3vw 0.5vw;
+        color: white;
+        background-color: transparent;
+        border: 0.3vw solid #808080;
+        border-radius: 100%;
+        text-decoration: none;
+      }
+      .solux-btn img {
+        width: 5vw;
+      }
+
+      /* card-section style sheet */
+      .card-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 3.5vw;
+      }
+      .card {
+        /* background-color: rgb(70, 69, 69); */
+        background-color: #808080;
+        border-radius: 5px;
+        width: calc(25% - 5.3vw);
+        margin-right: 0.9vw;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1.5vw;
+      }
+
+      .card h2 {
+        font-size: 1.5vw;
+        margin-bottom: 1vw;
+      }
+
+      .card_img {
+        width: 7.3vw;
+        margin-top: 2vw;
+        margin-bottom: 1vw;
+      }
+
+      .card-text {
+        width: 85%;
+        margin-top: -5px;
+        text-align: center;
+        font-size: 0.95vw;
+      }
+
+      /* activities style sheet */
+      .activity {
+        margin: 0px 8.5vw;
+        margin-top: 12vw;
+      }
+      .activity h1 {
+        font-size: 2.7vw;
+      }
+
+      .activities {
+        width: 83%;
+        display: flex;
+        margin: 4vw auto;
+        justify-content: space-between;
+      }
+
+      .activity-btn {
+        width: 13vw;
+        height: 13vw;
+        /* border: solid 0.5vw rgb(70, 69, 69); */
+        border: solid 0.3vw #808080;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 3.5vw;
+      }
+
+      .activity-btn a {
+        font-size: 2.1vw;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* projects style sheet */
+      .project {
+        margin: 0px 8.5vw;
+        margin-top: 14vw;
+      }
+
+      .project h1 {
+        font-size: 2.7vw;
+      }
+
+      .project h3 {
+        margin-left: 1vw;
+        margin-top: 3.5vw;
+        font-size: 1.5vw;
+      }
+
+      .thumbnail {
+        display: inline-block;
+        margin: 0.6vw;
+        cursor: pointer;
+      }
+
+      .thumbnail img {
+        margin-left: 1vw;
+        width: 10vw;
+        height: 8vw;
+        border: 0.2vw solid transparent;
+        border-radius: 1.4vw;
+      }
+
+      .thumbnail a {
+        font-size: 0.9vw;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* org-chart style sheet */
+      .org-chart {
+        margin: 0px 8.5vw;
+        margin-top: 14vw;
+      }
+      .org-chart h1 {
+        font-size: 2.7vw;
+      }
+
+      .org-chart h3 {
+        margin-top: 2vw;
+        font-size: 1.5vw;
+        margin-left: 1vw;
+      }
+
+      .project-org {
+        margin-left: 6vw;
+        align-items: center;
+        margin-top: 2vw;
+        margin-bottom: 4vw;
+        width: 70vw;
+        height: 40vw;
+      }
+
+      .org_chart {
+        margin-left: 13vw;
+        margin-top: 2vw;
+        width: 57vw;
+        height: 35vw;
+        align-items: center;
+      }
+
+      /* Media Queries for tablets */
+      @media screen and (min-width: 601px) and (max-width: 1024px) {
+        header {
+          padding: 20px;
+        }
+
+        header img {
+          width: 70px;
+          height: auto;
+          margin-left: 20px;
+          margin-top: 25px;
+        }
+
+        footer {
+          margin-top: 50px;
+          font-size: 9pt;
+        }
+
+        .joinus-btn {
+          padding: 5px 16px;
+          font-size: 12pt;
+          width: 80px;
+          font-weight: bolder;
+          color: #8ce0f4;
+          background-color: transparent;
+          border: 1.5px solid #8ce0f4;
+          text-decoration: none;
+          cursor: pointer;
+          border-radius: 20px;
+        }
+
+        .joinus-btn:hover {
+          background-color: transparent;
+          color: #8ce0f4;
+        }
+
+        .btn-container {
+          position: relative;
+          margin-top: -30px;
+          margin-right: -30px;
+        }
+
+        .container {
+          margin-top: 3vw;
+        }
+      }
+
+      /* Media Queries for mobiles */
+      @media screen and (min-width: 601px) and (max-width: 1024px) {
+        header {
+          padding: 20px;
+        }
+
+        header img {
+          width: 70px;
+          height: auto;
+          margin-left: 20px;
+          margin-top: 25px;
+        }
+
+        footer {
+          margin-top: 50px;
+          font-size: 9pt;
+        }
+
+        .container {
+          margin-top: 3vw;
+        }
+      }
+
+      /* Media Queries for mobiles */
+      @media screen and (max-width: 600px) {
+        body {
+          margin: 10px;
+        }
+
+        header img {
+          width: 70px;
+          height: auto;
+          margin-left: 5px;
+          margin-top: 5px;
+        }
+
+        .intro {
+          display: block;
+        }
+        .intro-container {
+          align-items: flex-start;
+          margin: 30vw 6.5vw;
+          margin-bottom: 34vw;
+          height: 100%;
+        }
+        .solux-text {
+          margin-top: 11px;
+          margin-bottom: 10vw;
+          font-size: 24.9vw;
+          -webkit-text-stroke: 0.5vw white;
+        }
+        .introduction {
+          margin-top: -4vw;
+          margin-left: 1vw;
+        }
+        .first {
+          margin-bottom: 0.8rem;
+          font-size: 3.8vw;
+        }
+        .detail {
+          margin-bottom: 0.8rem;
+          font-size: 2.75vw;
+          line-height: 15px;
+        }
+        .last {
+          font-size: 3.6vw;
+        }
+
+        /* join-us button style sheet */
+        .joinus-btn {
+          padding: 5px 13px;
+          font-size: 9pt;
+          width: 60px;
+          font-weight: bolder;
+          color: #8ce0f4;
+          background-color: black;
+          border: 1.5px solid #8ce0f4;
+          text-decoration: none;
+          cursor: pointer;
+          border-radius: 20px;
+        }
+
+        .joinus-btn:hover {
+          background-color: transparent;
+          color: #8ce0f4;
+        }
+
+        .btn-container {
+          position: relative;
+          margin-top: -43px;
+          margin-right: -2px;
+        }
+
+        /* to-blog button style sheet */
+        .button-container {
+          justify-content: center;
+          margin-top: 6vw;
+          margin-left: 30vw;
+        }
+
+        .solux-btn {
+          padding: 1px 2px;
+          border: 0.28vw solid #808080;
+          margin-top: 1vw;
+        }
+
+        .solux-btn img {
+          width: 15vw;
+        }
+
+        /* card-4 style sheet */
+        .card {
+          width: calc(48% - 25px);
+          margin-right: 1.8vw;
+          margin-bottom: 1.8vw;
+          border-radius: 2px;
+        }
+
+        .card img {
+          width: 16vw;
+          margin-top: 3.3vw;
+          margin-bottom: 2.5vw;
+        }
+
+        .card h2 {
+          font-size: 3.5vw;
+          margin-bottom: 2vw;
+        }
+
+        .card-text {
+          font-size: 2.6vw;
+          margin-bottom: 2vw;
+        }
+
+        /* Activitys style sheet */
+        .activity {
+          margin-top: 35vw;
+          margin-bottom: 25vw;
+        }
+        .activities {
+          width: 100%;
+          margin-top: 10vw;
+        }
+
+        .activity h1 {
+          font-size: 7vw;
+          margin: 0vw -2vw;
+        }
+
+        .activity-btn {
+          width: 22vw;
+          height: 22vw;
+          /* border: solid 1vw rgb(70, 69, 69); */
+          border: solid 1vw #808080;
+        }
+
+        .activity-btn a {
+          font-size: 4.3vw;
+        }
+
+        /* projects style sheet */
+        .project h1 {
+          font-size: 7vw;
+          margin: 0vw -2vw;
+        }
+
+        .project h3 {
+          font-size: 4vw;
+        }
+
+        .thumbnail img {
+          margin-left: 20px;
+          width: 100px;
+          height: 80px;
+          border-width: 6px;
+          border-radius: 10px;
+        }
+
+        /* org-chart style sheet */
+        .org-chart h1 {
+          font-size: 7vw;
+        }
+
+        .org-chart h3 {
+          font-size: 4vw;
+        }
+
+        .project-org {
+          margin-left: -13vw;
+          width: 110vw;
+          height: 70vw;
+        }
+
+        .org_chart {
+          width: 110vw;
+          height: 68vw;
+          margin-left: -14vw;
+        }
+
+        footer {
+          font-size: 8pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./images/soluxicon.png" alt="solux" />
+      <div class="btn-container">
+        <a href="./soluxRecruit_fin.html" target="_blank" class="joinus-btn">
+          Join Us ↗
+        </a>
+      </div>
+    </header>
+
+    <!-- intro 시작 -->
+    <div class="container">
+      <div class="intro-container">
+        <div class="intro">
+          <p class="solux-text">SOLUX</p>
+          <div class="introduction">
+            <p class="first">
+              Solux는 숙명의 유일한 프로그래밍 중앙동아리입니다.
+            </p>
+            <p class="detail">
+              소프트웨어학부의 리눅스 학회에서 출발한 솔룩스는<br />
+              이제 더 다양한 분야에서의 도전을 시작합니다.<br />
+              웹, 아두이노, 빅데이터 등의 분야와 자신의 전공을 융합하고<br />
+              다양한 분야에 관심있는 학우들이 모여 IT 프로젝트와 스터디를
+              진행합니다.
+            </p>
+            <p class="last">
+              더 나은 자신을 위한 특별한 동아리, 우리는 솔룩스입니다.
+            </p>
+          </div>
+        </div>
+        <!-- 블로그 이동 버튼 -->
+        <div class="button-container">
+          <button class="solux-btn">
+            <a href="https://solux.tistory.com/category"
+              ><img src="./images/soluxicon.png"
+            /></a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- intro 끝 -->
+
+    <!-- 동아리 소개 card 시작 -->
+    <div class="card-section">
+      <div class="card">
+        <img src="./images/project.png" alt="project" class="card_img" />
+        <h2>다양한 IT 프로젝트!</h2>
+        <p class="card-text">
+          SOLUX는 "학기 단위"로 <br />팀을 꾸려 활동합니다. 팀별로<br />매주
+          회의를 하며 프로젝트를<br />진행, 방학 말에 발표회를 <br />개최합니다.
+        </p>
+      </div>
+      <div class="card">
+        <img src="./images/study.png" alt="study" class="card_img" />
+        <h2>자유로운 스터디!</h2>
+        <p class="card-text">
+          누구든 원하는 스터디를 개설할 수 있으며, 모든 회원을 대상으로 모집
+          받습니다. <br />필요한 경우 인터넷 강의를 <br />일부 지원합니다.
+        </p>
+      </div>
+      <div class="card">
+        <img src="./images/seminar.png" alt="seminar" class="card_img" />
+        <h2>여러 분야의 세미나!</h2>
+        <p class="card-text">
+          학기 당 3회, 달의 마지막주 <br />금요일부터 일주일 간 녹화 강의
+          <br />형태로 진행됩니다. 프로그래밍<br />
+          기본 협업 툴부터 다양한 IT분야 체험까지 학습할 수 있습니다.
+        </p>
+      </div>
+      <div class="card">
+        <img src="./images/wiset.png" alt="wiset" class="card_img" />
+        <h2>OB 및 부원 간 네트워킹!</h2>
+        <p class="card-text">
+          OB멘토링, 연합 해커톤,<br />
+          초청 강의 등 기수별 행사 기획을 통해 OB 및 부원 간의 네트워킹을
+          장려합니다.
+        </p>
+      </div>
+    </div>
+    <!-- 동아리 소개 card 끝 -->
+
+    <!-- 기수별 활동 버튼 시작 -->
+    <div class="activity">
+      <h1 style="color: #8ce0f4">Activities</h1>
+      <div class="activities">
+        <div class="activity-btn">
+          <a href="https://solux.tistory.com/category/❤26기"><p>26기</p></a>
+        </div>
+        <div class="activity-btn">
+          <a href="https://solux.tistory.com/category/❤27기"><p>27기</p></a>
+        </div>
+        <div class="activity-btn">
+          <a href="https://solux.tistory.com/category/❤28기"><p>28기</p></a>
+        </div>
+      </div>
+    </div>
+    <!-- 기수별 활동 버튼 끝 -->
+
+    <!-- 기수별 수상작 시작 -->
+    <div class="project">
+      <h1 style="color: #8ce0f4">Projects</h1>
+
+      <h3>28-2 수상작</h3>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/116">
+          <img
+            src="https://blog.kakaocdn.net/dn/bAmGBM/btsEZoAp1pN/EKACYWgJZKQlskq7q0ak20/img.jpg"
+            alt="28-2 웨빗"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/117">
+          <img
+            src="https://blog.kakaocdn.net/dn/bx7SSU/btsEZTGXBHC/zrfZaCPKkEE72YkIkDDWHk/img.jpg"
+            alt="28-2 투게더"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/118">
+          <img
+            src="https://blog.kakaocdn.net/dn/b9vr2o/btsEWfEQaug/e7Zken2SlJa9ZYWOXZohsk/img.png"
+            alt="28-2 하이파이브"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/119">
+          <img
+            src="https://blog.kakaocdn.net/dn/bAqTac/btsEWfY6fNy/MctHLHI7fViydN8XmkPZrK/img.jpg"
+            alt="28-2 우아한 자매들"
+          />
+        </a>
+      </div>
+
+      <h3>28-1 수상작</h3>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/106">
+          <img
+            src="https://blog.kakaocdn.net/dn/luyLx/btszmy3Kel3/4nd2FKst6arWCMnmbzPde1/img.png"
+            alt="28-1 파워레인저"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/105">
+          <img
+            src="https://blog.kakaocdn.net/dn/boRMe9/btszsBYUuGn/CKLxpqNoabGjQpkwuv3GK1/img.png"
+            alt="28-1 실룩솔룩"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/107">
+          <img
+            src="https://blog.kakaocdn.net/dn/C3laI/btszpBFS0lw/v6wpqHE5hLnkHtmo4Ap0r1/img.png"
+            alt="28-1 핫식스"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/109">
+          <img
+            src="https://blog.kakaocdn.net/dn/sDi08/btszyMHStQS/nalIrWXKnMaJk7Na1yF3U0/img.png"
+            alt="28-1 앱얼레벌레"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/110">
+          <img
+            src="https://blog.kakaocdn.net/dn/cMeqtQ/btszC7J1G12/ryAEnplQXLfawHjL0rxwY0/img.png"
+            alt="28-1 중꺾마"
+          />
+        </a>
+      </div>
+
+      <h3>27-2 수상작</h3>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/70">
+          <img
+            src="https://blog.kakaocdn.net/dn/cK1KQk/btr0IwjWqIQ/hhxOSG2Ez1KtU63l793BHK/img.png"
+            alt="27-2 새내기들"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/60">
+          <img
+            src="https://blog.kakaocdn.net/dn/caeEyq/btrZ0J6MKG0/c0FlsdQV4mTEbWOCWkVim0/img.png"
+            alt="27-2 webIT"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/76">
+          <img
+            src="https://blog.kakaocdn.net/dn/cxHoDx/btr02AfwLD7/vk0ZOHyZ2WLpCstImi8qF0/img.png"
+            alt="27-2 sns"
+          />
+        </a>
+      </div>
+
+      <h3>27-1 수상작</h3>
+
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/79">
+          <img
+            src="https://blog.kakaocdn.net/dn/v4Jyf/btr0KHGW1q5/KEOfMw0a6xsu7RYQ6k8we0/img.png"
+            alt="27-1 (주)3송게임즈"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/66">
+          <img
+            src="https://blog.kakaocdn.net/dn/HCkaa/btr0uwFYF23/EOmKBHEDVnDEpXVvy5tcm0/img.png"
+            alt="27-1 데이팅"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/75">
+          <img
+            src="https://blog.kakaocdn.net/dn/bjvH9O/btr0Iu85un0/xlWI9Ye2Cxjqa9uERj2kS1/img.png"
+            alt="27-1 SOLABO"
+          />
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://solux.tistory.com/62">
+          <img
+            src="https://blog.kakaocdn.net/dn/ViDWr/btr0AOeJ9qN/AW4PpfBQOHM5iiehijpDd1/img.png"
+            alt="27-1 ITs"
+          />
+        </a>
+      </div>
+    </div>
+    <!-- 기수별 수상작 끝 -->
+
+    <!-- 조직도 시작 -->
+    <div class="org-chart">
+      <h1 style="color: #8ce0f4">Org Chart</h1>
+      <h3>프로젝트 부원 조직도</h3>
+      <div class="charts-container">
+        <img src="./images/project-chart.png" class="project-org" />
+      </div>
+      <h3>운영진 조직도</h3>
+      <div class="charts-container">
+        <img src="./images/mana-chart.png" class="org_chart" />
+      </div>
+    </div>
+    <!-- 조직도 끝 -->
+
+    <script></script>
+  </body>
+  <footer id="footer">
+    <p class="copyright">
+      © 2024. SOLUX all rights reserved.<a
+        href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=sm.solux@gmail.com"
+        class="admin"
+        >email - sm.solux@gmail.com</a
+      >
+    </p>
+  </footer>
+</html>
