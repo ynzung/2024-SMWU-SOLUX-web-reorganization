@@ -1,9 +1,20 @@
-<div align=center>
-  <h3>2024 숙명여자대학교 프로그래밍 중앙동아리 솔룩스(SOLUX) 웹개편팀</h3>
-  
-| **김소영** | **🙋🏻‍♀️성윤정** | **이아영** |
-|:-----------:|:-----------:|:-----------:|
-| 메인페이지 로고, Activities 부분 | [Projects 부분](https://sm-solux.dev/), [Recruit 페이지 전체](https://tistory1.daumcdn.net/tistory/3588264/skin/images/soluxRecruit_fin.html) | Org Chart 부분 |
+<div align="center">
+
+### 💻 2024 숙명여자대학교 프로그래밍 중앙동아리 **SOLUX(솔룩스)** 웹 개편 프로젝트
+
+🗓️ **프로젝트 기간**: 2024.01.09 ~ 2024.02.20  
+🛠️ **개발 언어**: HTML, CSS, JavaScript  
+
+---
+
+### 👩‍💻 팀원 및 담당 영역
+
+| 이름 | 담당 파트 |
+|:----:|:-----------|
+| **김소영** | 메인 페이지 로고, **Activities** 섹션 |
+| **🙋🏻‍♀️성윤정** | [**Projects** 섹션](https://sm-solux.dev/), [**Recruit** 페이지 전체](https://tistory1.daumcdn.net/tistory/3588264/skin/images/soluxRecruit_fin.html) |
+| **이아영** | **Org Chart**(조직도) 섹션 |
+
 </div>
 
 ## 프로젝트 내용
